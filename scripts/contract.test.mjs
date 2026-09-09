@@ -46,3 +46,11 @@ test("canonical Host Little URL uses verified TLS without libpq startup paramete
     await sql.end();
   }
 });
+
+test("public host survives API Gateway without accepting a foreign browser origin", () => {
+  const make = (origin, extra = {}) => new Request("https://internal.execute-api.us-east-1.amazonaws.com/api/note", {headers: {host: "internal.execute-api.us-east-1.amazonaws.com", "x-hostlittle-viewer-host": "app.hostlittle.app", origin, ...extra}});
+  assert.equal(sameOrigin(make("https://app.hostlittle.app")), true);
+  assert.equal(sameOrigin(make("https://foreign.example")), false);
+  assert.equal(sameOrigin(make("https://app.hostlittle.app", {"sec-fetch-site": "cross-site"})), false);
+  assert.equal(sameOrigin(make("https://foreign.example", {"x-forwarded-host": "foreign.example"})), false);
+});

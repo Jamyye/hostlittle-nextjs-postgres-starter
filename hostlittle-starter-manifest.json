@@ -46,7 +46,7 @@
     },
     {
       "path": "lib/note.mjs",
-      "sha256": "20e602b1f5fa3c1be6af1021ed35ba002e4bf06530032199b6a58f3f76b22a81"
+      "sha256": "8bb2d194b44e01ba436fa9bf6189661197abff363688b4091d4c71dad32c4709"
     },
     {
       "path": "migrations/001_note.sql",
@@ -66,7 +66,7 @@
     },
     {
       "path": "scripts/contract.test.mjs",
-      "sha256": "3e12fc7077bd89f73a1bd926ea8605f1d5ea2a4342cb8f410eb873e714b3b08e"
+      "sha256": "3f195cd308d5db0c98a225f386d6dcc20da8e64f78efe1915b8b5c6c5814aa08"
     },
     {
       "path": "scripts/migrate.mjs",
