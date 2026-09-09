@@ -1,0 +1,84 @@
+{
+  "schema": "hostlittle.starter.v1",
+  "id": "nextjs-postgres",
+  "repository": "Jamyye/hostlittle-nextjs-postgres-starter",
+  "published": false,
+  "files": [
+    {
+      "path": ".env.example",
+      "sha256": "971abdde0d1914e44e7f6967330463ef84e9eb6c7bbf2e3b27d3415109413b1c"
+    },
+    {
+      "path": ".gitignore",
+      "sha256": "0674c5b4bf5621cae135ceaccc35dac4657459771dda9fa863b5d8501fec3761"
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "203d08855bb7e40406ee469ca9f256ae38c01a64189af76c2a7daa525411a965"
+    },
+    {
+      "path": "README.md",
+      "sha256": "10fcce1a1fa9dc40ea71d277878d1cc71ec2947271e07c376c89553e4f95bf79"
+    },
+    {
+      "path": "app/api/health/route.js",
+      "sha256": "29006f37f381865c33e574c991b9fbca4644014fd27003221828d3ea3442cf11"
+    },
+    {
+      "path": "app/api/note/route.js",
+      "sha256": "0a320a017fdad4e556e5d3b7bc071bd344463fc8765647bc662e0dac2598ce5e"
+    },
+    {
+      "path": "app/layout.js",
+      "sha256": "d5cbc81e9b40ad2c81e1c321036299aefd6e98ba593d09a95d6911438047f27a"
+    },
+    {
+      "path": "app/page.js",
+      "sha256": "208553fba1ca33e3674165360a478e679c3c34a426ca3dfa119e92846cb5e833"
+    },
+    {
+      "path": "app/style.css",
+      "sha256": "6780d36e2674b7d3aaf1409324f8c124ac24b42905288fa202ac59b71f97ff0f"
+    },
+    {
+      "path": "lib/database.mjs",
+      "sha256": "ac1080c16acb0b9e11aacc004e89177c14ae621f82e6e411778c074a43ab22e8"
+    },
+    {
+      "path": "lib/note.mjs",
+      "sha256": "20e602b1f5fa3c1be6af1021ed35ba002e4bf06530032199b6a58f3f76b22a81"
+    },
+    {
+      "path": "migrations/001_note.sql",
+      "sha256": "5ba947dc5408ab03532ff0c8d73070700ab38a59e32b997ffbad9eeca17f4be6"
+    },
+    {
+      "path": "next.config.mjs",
+      "sha256": "f9fb0032452c2da7eddeaf842e3682e3db57ff152805c4e8b4d6b3e48a234029"
+    },
+    {
+      "path": "package-lock.json",
+      "sha256": "9ba46f3d7dbd0f15be2072ab5bf4c8fc0868bb4e9a7dcf4e39de1fa05731eeef"
+    },
+    {
+      "path": "package.json",
+      "sha256": "4486dd06de7911358288bdbdfcb1290e1edc785ba8fbb294a51b528ac45a53fc"
+    },
+    {
+      "path": "scripts/contract.test.mjs",
+      "sha256": "522c610aad4d4187ba86f4adf8c5310ef22ec6cc7784696714bbda74cb7f2813"
+    },
+    {
+      "path": "scripts/migrate.mjs",
+      "sha256": "96c429ede7cbeeed674800cbcfac4f6a703c4debe11f2f3dfb9416ede088e59e"
+    },
+    {
+      "path": "scripts/prove.mjs",
+      "sha256": "1814ffbab059fcd4ea050211bf5ff3f76e20a7f677a6046b2ca2768e0b94ad0f"
+    },
+    {
+      "path": "scripts/start.mjs",
+      "sha256": "d56b8dc773b7358d9742886415a03598a3b39bd46592c9841bf341a210a5ab6d"
+    }
+  ]
+}
