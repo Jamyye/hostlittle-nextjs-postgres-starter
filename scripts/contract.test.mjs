@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import test from "node:test";
-import { databaseOptions } from "../lib/database.mjs";
+import postgres from "postgres";
+import { databaseConnection, databaseOptions } from "../lib/database.mjs";
 import { parseNote, sameOrigin } from "../lib/note.mjs";
 test("remote databases always verify TLS even when local development is allowed", () => {
   assert.equal(
@@ -32,4 +33,16 @@ test("browser mutations need matching origin; missing and foreign origins are re
     false,
   );
   assert.equal(sameOrigin(new Request("https://app.example.test")), false);
+});
+
+test("canonical Host Little URL uses verified TLS without libpq startup parameters", async () => {
+  const sql = postgres(...databaseConnection("postgres://fixture:fixture@db.example.test/db?sslmode=verify-full&sslrootcert=system&application_name=starter-proof"));
+  try {
+    assert.equal(sql.options.ssl, "verify-full");
+    assert.equal(sql.options.connection.sslrootcert, undefined);
+    assert.equal(sql.options.connection.application_name, "starter-proof");
+    assert.equal(sql.options.database, "db");
+  } finally {
+    await sql.end();
+  }
 });

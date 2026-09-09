@@ -42,7 +42,7 @@
     },
     {
       "path": "lib/database.mjs",
-      "sha256": "ac1080c16acb0b9e11aacc004e89177c14ae621f82e6e411778c074a43ab22e8"
+      "sha256": "00e43b6fb1d8427681636d099be82db5f43bbe540f775e147a855b1c35190178"
     },
     {
       "path": "lib/note.mjs",
@@ -66,7 +66,7 @@
     },
     {
       "path": "scripts/contract.test.mjs",
-      "sha256": "522c610aad4d4187ba86f4adf8c5310ef22ec6cc7784696714bbda74cb7f2813"
+      "sha256": "3e12fc7077bd89f73a1bd926ea8605f1d5ea2a4342cb8f410eb873e714b3b08e"
     },
     {
       "path": "scripts/migrate.mjs",
