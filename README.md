@@ -10,7 +10,7 @@ Paste this into your agent: “Read https://hostlittle.com/get-started.md and he
 
 Create your repository from the published `Jamyye/hostlittle-nextjs-postgres-starter` template, then open `https://hostlittle.com/get-started?template=nextjs-postgres&db=postgres`. Sign in, choose your copy and branch, and keep Postgres attached. Use build command `npm run build`, start command `npm start`, and health path `/api/health`. Node 22 is required.
 
-The start command runs the idempotent migration before opening the HTTP listener and never resets an existing note. Builds do not require database credentials. Host Little's normal isolated build and protected runtime binding are used. Connection errors are generic; connection strings are not logged.
+The start command runs the idempotent migration before opening the HTTP listener and never resets an existing note. Builds do not require database credentials. Host Little's normal isolated build and protected runtime binding are used. Connection errors are generic; connection strings are not logged. After a push, wait for the deployment to finish and verify that `/api/health` reports `database: connected`.
 
 Publish this directory as the template repository root. Do not import the platform monorepo instead. Publication is a separate release step, not something the export script performs.
 
