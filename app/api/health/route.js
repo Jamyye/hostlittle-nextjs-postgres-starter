@@ -9,6 +9,7 @@ export async function GET() {
       {
         ok: true,
         starterId: "hostlittle-nextjs-postgres-v1",
+        runtime: "nodejs",
         database: "connected",
         migration: "001_note",
       },
