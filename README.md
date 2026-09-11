@@ -47,3 +47,5 @@ Preview databases must be fresh empty databases with separate credentials and TT
 ## License
 
 Authored starter code is MIT licensed. Next.js and React are MIT licensed; postgres.js is Unlicense licensed. Installed dependencies retain their own license files. No third-party imagery or user analytics are included.
+
+The health endpoint reports the Node runtime name and major version alongside database readiness.
