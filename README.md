@@ -24,7 +24,7 @@ node --env-file=.env.local scripts/migrate.mjs
 npm run dev
 ```
 
-Remote connections always verify TLS. `STARTER_ALLOW_LOCAL_DATABASE=true` disables TLS only for loopback hosts. For production build/start, supply DATABASE_URL in the child environment and run `npm run build` then `npm start`. Do not copy production database URLs into previews or build/public variables.
+Remote connections always verify TLS. `STARTER_ALLOW_LOCAL_DATABASE=true` disables TLS only for loopback hosts. Run `npm run build` without database credentials. Supply DATABASE_URL only to the child environment for migrations and `npm start`. Do not copy production database URLs into previews or build/public variables.
 
 ## Migrations and data
 
