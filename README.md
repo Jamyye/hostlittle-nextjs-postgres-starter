@@ -2,6 +2,10 @@
 
 A runnable Next.js application with one persistent demo note. All visitors share this synthetic example; it is not an authenticated notes product. Add authentication and authorization before using real customer data.
 
+## Build with your coding agent
+
+Paste this into your agent: “Read https://hostlittle.com/get-started.md and help me deploy this Next.js + Postgres starter on Host Little.” The included `AGENTS.md` covers this starter’s commands and data boundaries.
+
 ## Deploy on Host Little
 
 Create your repository from the published `Jamyye/hostlittle-nextjs-postgres-starter` template, then open `https://hostlittle.com/get-started?template=nextjs-postgres&db=postgres`. Sign in, choose your copy and branch, and keep Postgres attached. Use build command `npm run build`, start command `npm start`, and health path `/api/health`. Node 22 is required.
