@@ -1,4 +1,4 @@
-import { database } from "../../../lib/database.mjs";
+import { withDatabase } from "../../../lib/database.mjs";
 import { parseNote, sameOrigin } from "../../../lib/note.mjs";
 export const dynamic = "force-dynamic";
 const json = (body, status = 200) =>
@@ -6,7 +6,7 @@ const json = (body, status = 200) =>
 export async function GET() {
   try {
     const [note] =
-      await database()`select body, revision::text, updated_at from public.starter_note where id = 1`;
+      await withDatabase((sql) => sql`select body, revision::text, updated_at from public.starter_note where id = 1`);
     return note ? json({ note }) : json({ error: "Run the starter migration." }, 503);
   } catch {
     return json({ error: "Database unavailable. Try again shortly." }, 503);
@@ -40,7 +40,7 @@ export async function POST(request) {
   }
   try {
     const [note] =
-      await database()`update public.starter_note set body = ${body}, revision = revision + 1, updated_at = now() where id = 1 returning body, revision::text, updated_at`;
+      await withDatabase((sql) => sql`update public.starter_note set body = ${body}, revision = revision + 1, updated_at = now() where id = 1 returning body, revision::text, updated_at`);
     return note ? json({ note }) : json({ error: "Run the starter migration." }, 503);
   } catch {
     return json({ error: "Note could not be saved. Try again." }, 503);

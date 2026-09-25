@@ -1,9 +1,9 @@
-import { database } from "../../../lib/database.mjs";
+import { withDatabase } from "../../../lib/database.mjs";
 export const dynamic = "force-dynamic";
 export async function GET() {
   try {
     const [row] =
-      await database()`select count(*)::int as count from public.starter_note where id = 1`;
+      await withDatabase((sql) => sql`select count(*)::int as count from public.starter_note where id = 1`);
     if (row.count !== 1) throw new Error();
     return Response.json(
       {
